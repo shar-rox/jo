@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Johana Elizabeth Thomson — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{ --pale-pink:#FDE8EA; --soft-pink:#F8D3DA; --pale-lilac:#F6EAF8; --mauve-beige:#D9BFB9; --card:rgba(255,255,255,0.92); --accent:#B99FB0; --muted:#6b5c63; --text:#221f22 }
+    body { background: linear-gradient(180deg,var(--pale-pink) 0%, var(--soft-pink) 40%, var(--pale-lilac) 70%, var(--mauve-beige) 100%); font-family: 'Poppins', sans-serif; color: var(--text); line-height: 1.6; margin: 0; padding: 40px; }
+    .hero{ text-align:center; padding:36px; background:var(--card); border-radius:14px; margin-bottom:28px }
+    .name{ font-size:2.2rem; font-weight:500; color:var(--text); }
+    .tagline{ color:var(--muted); margin-top:8px; font-style:italic; font-weight:300; }
+    section{ background:var(--card); padding:18px; border-radius:14px; margin-top:24px }
+    h3{ color:var(--accent); margin:0 0 8px 0; font-weight:500; font-size:1.4rem; text-transform:uppercase; letter-spacing:0.5px; }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:12px }
+    .tile{ position:relative; background:white; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); padding:10px; display:flex; flex-direction:column; align-items:center; cursor:pointer; transition:transform 0.18s ease }
+    .tile:hover{ transform:translateY(-4px); }
+    .thumb{ width:100%; height:auto; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#fff,#fbfbfd); border-radius:8px; overflow:hidden }
+    .thumb.award img{ max-width:100%; max-height:100%; display:block; border-radius:8px; }
+    .thumb img{ width:100%; height:auto; display:block; border-radius:8px; }
+    .caption{ text-align:center; font-size:14px; color:var(--text); margin-top:10px; font-weight:400; letter-spacing:0.2px; }
+    .meta-small{ text-align:center; font-size:12px; color:var(--muted); margin-top:6px }
+    .modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); justify-content:center; align-items:center; z-index:1000; padding:20px }
+    .modal.active{ display:flex; }
+    .modal img{ width:auto; height:auto; max-width:98%; max-height:96%; border-radius:10px; box-shadow:0 30px 80px rgba(0,0,0,0.7); }
+    .modal .close{ position:absolute; top:20px; right:28px; color:white; font-size:30px; cursor:pointer; }
+    .modal .nav{ position:absolute; top:50%; transform:translateY(-50%); font-size:36px; color:white; padding:12px; background:rgba(0,0,0,0.35); border-radius:50%; cursor:pointer; user-select:none }
+    .modal .nav.left{ left:20px } .modal .nav.right{ right:20px }
+    @media (max-width:600px){ body{padding:18px} .modal .nav{font-size:28px;padding:10px} }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="name">Johana Elizabeth Thomson</div>
+    <div class="tagline">“My brain is a mood board. My designs are the vibe.”</div>
+  </div>
+
+  <section class="certificates">
+    <h3>My Certificates</h3>
+    <div class="grid">
+      <div class="tile" data-category="cert" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/Screenshot%202025-11-05%20205520.png" data-issuer="Coursera Project Network">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/Screenshot%202025-11-05%20205520.png" alt="Create and Design Digital Products using Canva"></div>
+        <div class="caption">Create &amp; Design Digital Products using Canva</div>
+        <div class="meta-small">Issuer: Coursera Project Network • Year: 2025</div>
+      </div>
+      <div class="tile" data-category="cert" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/Screenshot%202025-11-05%20205742.png" data-issuer="Coursera Project Network">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/Screenshot%202025-11-05%20205742.png" alt="Use Canva to Design Digital Course Collateral"></div>
+        <div class="caption">Use Canva to Design Digital Course Collateral</div>
+        <div class="meta-small">Issuer: Coursera Project Network • Year: 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="awards">
+    <h3>Awards & Recognitions</h3>
+    <div class="grid">
+      <div class="tile" data-category="award" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/IMG-20251104-WA0015%5B1%5D.jpg">
+        <div class="thumb award"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/IMG-20251104-WA0015%5B1%5D.jpg" alt="Logo Competition Certificate"></div>
+        <div class="caption">Logo Competition — Certificate</div>
+        <div class="meta-small">Issuer: Local • Year: 2025</div>
+      </div>
+      <div class="tile" data-category="award" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.52.59_83396fc3%20-%20Copy.jpg">
+        <div class="thumb award"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.52.59_83396fc3%20-%20Copy.jpg" alt="Best greeting card - church award"></div>
+        <div class="caption">It got award in church — Best Greeting Card</div>
+        <div class="meta-small">Award: Best Greeting Card (Church) • Year: 2024</div>
+      </div>
+      <div class="tile" data-category="award" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/WhatsApp%20Image%202025-11-04%20at%2022.58.36_55509fd9.jpg">
+        <div class="thumb award"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/certs/WhatsApp%20Image%202025-11-04%20at%2022.58.36_55509fd9.jpg" alt="Logo Competition Entry"></div>
+        <div class="caption">Logo Competition (Entry)</div>
+        <div class="meta-small">Issuer: Local Event • Year: 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="works">
+    <h3>My Works</h3>
+    <div class="grid">
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.52.59_70738a0b.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.52.59_70738a0b.jpg" alt="Work 1"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.52.59_83396fc3%20-%20Copy.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.52.59_83396fc3%20-%20Copy.jpg" alt="Work 2"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.00_3e19a514%20-%20Copy.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.00_3e19a514%20-%20Copy.jpg" alt="Work 3"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.01_513f78ab%20-%20Copy.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.01_513f78ab%20-%20Copy.jpg" alt="Work 4"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.01_908634f2%20-%20Copy.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.01_908634f2%20-%20Copy.jpg" alt="Work 5"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.02_1257d21e%20-%20Copy.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.02_1257d21e%20-%20Copy.jpg" alt="Work 6"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.03_23dcc51f.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.03_23dcc51f.jpg" alt="Work 7"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.03_30cfa976.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.03_30cfa976.jpg" alt="Work 8"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.58.37_4332d6dd.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.58.37_4332d6dd.jpg" alt="Work 9"></div>
+      </div>
+      <div class="tile" data-category="work" data-src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.02_eb552019.jpg">
+        <div class="thumb"><img src="https://raw.githubusercontent.com/shar-rox/jo/main/works/WhatsApp%20Image%202025-11-04%20at%2022.53.02_eb552019.jpg" alt="Work 10"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h3>Contact</h3>
+    <p>📩 Reach me: <a href="mailto:ejohanathomson@gmail.com">ejohanathomson@gmail.com</a></p>
+  </section>
+
+  <div class="modal" id="imageModal">
+    <div class="close" onclick="closeModal()">&times;</div>
+    <div class="nav left" id="modalPrev">‹</div>
+    <img id="modalImage" src="" alt="Full View">
+    <div class="nav right" id="modalNext">›</div>
+  </div>
+
+  <script>
+    const modal=document.getElementById('imageModal');
+    const modalImage=document.getElementById('modalImage');
+    let currentCategory='work';
+    let currentIndex=0;
+
+    function collectItems(cat){
+      return Array.from(document.querySelectorAll(`.tile[data-category="${cat}"]`)).map(t=>t.dataset.src);
+    }
+
+    function openModal(src){
+      const tile=Array.from(document.querySelectorAll('.tile')).find(t=>t.dataset.src===src);
+      if(tile){currentCategory=tile.dataset.category;const arr=collectItems(currentCategory);currentIndex=arr.indexOf(src);}else{currentCategory='work';currentIndex=0;}
+      modalImage.src=src;modal.classList.add('active');
+    }
+
+    function closeModal(){modal.classList.remove('active');}
+
+    function gotoIndex(idx){const arr=collectItems(currentCategory);if(arr.length===0)return;currentIndex=(idx+arr.length)%arr.length;modalImage.src=arr[currentIndex];}
+
+    document.getElementById('modalPrev').addEventListener('click',()=>gotoIndex(currentIndex-1));
+    document.getElementById('modalNext').addEventListener('click',()=>gotoIndex(currentIndex+1));
+    window.addEventListener('keydown',e=>{if(!modal.classList.contains('active'))return;if(e.key==='ArrowLeft')gotoIndex(currentIndex-1);if(e.key==='ArrowRight')gotoIndex(currentIndex+1);if(e.key==='Escape')closeModal();});
+
+    document.querySelectorAll('.tile').forEach(t=>t.addEventListener('click',()=>openModal(t.dataset.src)));
+  </script>
+</body>
+</html>
